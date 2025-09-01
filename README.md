@@ -11,3 +11,5 @@ TIMELINE
 - Start training the NN on the augmented dataset
 - Test the model once trained
 - Stress the model with data augemntation
+
+Shall we think about three dymensional DFT? And try to compute the three channels differently?
