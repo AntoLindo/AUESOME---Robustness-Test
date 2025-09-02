@@ -2,7 +2,7 @@
 CNN for Syntethic Images Classifier Through Spectral Analysis
 
 
-DATASAT @ https://www.kaggle.com/datasets/tristanzhang32/ai-generated-images-vs-real-images?resource=download-directory
+DATASET @ https://www.kaggle.com/datasets/tristanzhang32/ai-generated-images-vs-real-images?resource=download-directory
 
 
 TIMELINE
