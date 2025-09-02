@@ -2,7 +2,7 @@
 CNN for Syntethic Images Classifier Through Spectral Analysis
 
 
-DATASET @ https://www.kaggle.com/datasets/tristanzhang32/ai-generated-images-vs-real-images?resource=download-directory
+ORIGINAL DATASET @ https://www.kaggle.com/datasets/tristanzhang32/ai-generated-images-vs-real-images?resource=download-directory
 
 
 TIMELINE
@@ -17,5 +17,11 @@ TIMELINE
 Shall we think about three dymensional DFT? And try to compute the three channels differently?
 
 
-make_subset.py is a Python code to create a randomized subset of 10% of elements out of the original dataset and resize them to have the long edge of 512px.
+ABOUT FILES
+
+make_subset.py
+is a Python code to create a randomized subset of 10% of elements out of the original dataset and resize them to have the long edge of 512px.
 Now we are working with 2400 real images and 2400 fake images for the training set.
+
+CODE_1.py
+is the first attempt at building a CNN based on ResNet-18.
