@@ -15,3 +15,7 @@ TIMELINE
 - Stress the model with data augemntation
 
 Shall we think about three dymensional DFT? And try to compute the three channels differently?
+
+
+make_subset.py is a Python code to create a subset of 10% of elements out of the original dataset and resize them to have the long edge of 512px.
+Now we are working with 2400 real images and 2400 fake images for the training set.
