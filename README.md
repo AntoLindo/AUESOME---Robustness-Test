@@ -29,6 +29,19 @@ CODE_1.py
 is the first attempt at building a CNN based on ResNet-18.
 
 
+CODE_2.py
+
+adding Validation set and fixing summary command
+
+
+CODE_3.py
+
+
+Adding the preprocessing of the DFT and the DCT t the network code in the trasformation phase. 
+VERY IMPORTANT: Conv layers of ResNet have been updated to have 9 layers instead of 3: DFT MAGNITUDE (R+B+G) + DFT PHASE (R+B+G) + DCT (R+B+G) 
+In this way we might find a stonger pattern recognition power in the network.
+
+
 data_preproc.py
 
 is a Python code to compute the 3 channels DFT magnitude and phase and the DCT of a given image. 
