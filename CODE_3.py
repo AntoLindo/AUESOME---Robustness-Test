@@ -100,6 +100,10 @@ with torch.no_grad():
 # Replace last FC
 num_classes = 2
 model.fc = nn.Linear(model.fc.in_features, num_classes)
+#model = model.to(device)
+
+# Carica lo stato salvato
+model.load_state_dict(torch.load("D:/MACHINE LEARNING/Savings/resnet18_dftdct.pth"))
 model = model.to(device)
 
 # ----------------------------
@@ -111,7 +115,13 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
 # ----------------------------
 # 5. Training Loop
 # ----------------------------
-EPOCHS = 1
+EPOCHS = 3
+
+train_losses = []
+val_losses = []
+train_accs = []
+val_accs = []
+
 for epoch in range(EPOCHS):
     model.train()
     running_loss, correct, total = 0.0, 0, 0
@@ -147,6 +157,12 @@ for epoch in range(EPOCHS):
 
     val_loss /= len(val_loader)
     val_acc = val_correct / val_total
+
+    # 🔹 Salva metriche nelle liste
+    train_losses.append(train_loss)
+    val_losses.append(val_loss)
+    train_accs.append(train_acc)
+    val_accs.append(val_acc)
 
     print(f"Epoch {epoch+1}/{EPOCHS} "
           f"| Train Loss: {train_loss:.4f}, Acc: {train_acc:.4f} "
