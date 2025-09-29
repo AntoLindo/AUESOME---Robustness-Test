@@ -6,6 +6,9 @@ from tqdm import tqdm
 import cv2
 import numpy as np
 from PIL import Image
+from plot_utils import plot_training_curves
+
+
 
 # ----------------------------
 # 1. Custom Transform
@@ -108,7 +111,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
 # ----------------------------
 # 5. Training Loop
 # ----------------------------
-EPOCHS = 5
+EPOCHS = 1
 for epoch in range(EPOCHS):
     model.train()
     running_loss, correct, total = 0.0, 0, 0
@@ -154,3 +157,11 @@ for epoch in range(EPOCHS):
 # ----------------------------
 torch.save(model.state_dict(), "D:/MACHINE LEARNING/savings/resnet18_dftdct.pth")
 print("✅ Model saved as resnet18_dftdct.pth")
+
+
+# ----------------------------
+# 7. Plot Loss and accuracy variatios
+# ----------------------------
+
+
+plot_training_curves(train_losses, val_losses, train_accs, val_accs)
