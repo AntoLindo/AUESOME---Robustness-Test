@@ -3,6 +3,7 @@ import torch.nn as nn
 from torchvision import models, datasets
 from torch.utils.data import DataLoader
 import cv2
+from tqdm import tqdm
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
@@ -66,7 +67,7 @@ IMG_SIZE = 224
 transform = DFTDCTTransform(img_size=IMG_SIZE)
 
 test_dataset = datasets.ImageFolder("D:/MACHINE LEARNING/AIvsREAL_subset/test", transform=transform)
-test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False)
+test_loader = DataLoader(test_dataset, batch_size=30, shuffle=False)
 
 # ----------------------------
 # 3. Load 9-channel ResNet18
@@ -92,19 +93,19 @@ model.fc = nn.Linear(model.fc.in_features, num_classes)
 # Load saved weights
 model.load_state_dict(torch.load("D:/MACHINE LEARNING/savings/resnet18_dftdct.pth", map_location=device))
 model = model.to(device)
-model.eval()  # important!
+#model.eval()  # important!
 
 # ----------------------------
 # 4. Evaluation
 # ----------------------------
 y_true, y_pred = [], []
 correct, total = 0, 0
-
+'''
 with torch.no_grad():
-    for images, labels in test_loader:
+    for images, labels in tqdm(test_loader):
         images, labels = images.to(device), labels.to(device)
-        outputs = model(images)
-        _, preds = torch.max(outputs, 1)
+        outputs = model(images) #Passa il batch attraverso la rete. outputs è un tensore di dimensione (batch_size, num_classes) con i logits (punteggi grezzi prima della softmax).
+        _, preds = torch.max(outputs, 1) #_ takes the index of the current image, while, preds takes the value of the real prediction, labeled 1. This finds all the (1) predictions
         y_true.extend(labels.cpu().numpy())
         y_pred.extend(preds.cpu().numpy())
         correct += (preds == labels).sum().item()
@@ -120,6 +121,6 @@ cm = confusion_matrix(y_true, y_pred)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=test_dataset.classes)
 disp.plot(cmap="Blues")
 plt.show()
-
+'''
 # Mostra 8 immagini con predizioni
-show_predictions(test_dataset, test_loader, model, device, num_images=8)
+show_predictions(test_dataset, test_loader, model, device, num_images=30, row_size=10)
