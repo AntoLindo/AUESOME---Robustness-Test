@@ -30,8 +30,7 @@ The network has been built and the training process has started using the Python
 
 ABOUT FILES
 
-make_subset.py : is a Python code to create a randomized subset of 10% of elements out of the original dataset and resize them to have the long edge of 512px.
-Now we are working with 2400 real images and 2400 fake images for the training set.
+AUSOME_rob_test.py : Ccurrent version of trainable CNN (update of CODE_3.py)
 
 CODE_1.py : is the first attempt at building a CNN based on ResNet-18.
 
@@ -42,6 +41,10 @@ CODE_2.py: adding Validation set and fixing summary command
 CODE_3.py : Adding the preprocessing of the DFT and the DCT t the network code in the trasformation phase. 
 VERY IMPORTANT: Conv layers of ResNet have been updated to have 9 layers instead of 3: DFT MAGNITUDE (R+B+G) + DFT PHASE (R+B+G) + DCT (R+B+G) 
 In this way we might find a stonger pattern recognition power in the network.
+
+
+make_subset.py : is a Python code to create a randomized subset of 10% of elements out of the original dataset and resize them to have the long edge of 512px.
+Now we are working with 2400 real images and 2400 fake images for the training set.
 
 
 data_preproc.py : is a Python code to compute the 3 channels DFT magnitude and phase and the DCT of a given image. 
