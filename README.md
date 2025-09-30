@@ -5,7 +5,7 @@ CNN for Syntethic Images Classifier Through Spectral Analysis
 ORIGINAL DATASET @ https://www.kaggle.com/datasets/tristanzhang32/ai-generated-images-vs-real-images?resource=download-directory
 
 
-TIMELINE
+GENERAL TIMELINE
 
 - Build the dataset
 - Choose the best CNN model to be implemented
@@ -15,6 +15,17 @@ TIMELINE
 - Stress the model with data augemntation
 
 Shall we think about three dymensional DFT? And try to compute the three channels differently?
+
+
+SEPTEMBER 30th : STATE OF THE ART UPDATE
+
+The network has been built and the training process has started using the Python code called CODE_3.py. Fist results show good prediction capabilities. Next steps will be the following:
+- Train the network more to increase the accuracy, plotiting loss function epoch after epoch.
+- Test the accuracy of the network again.
+- MOVE ALL THE SOFTWARE STRUCTURE ON GOOGLE COLAB (In order to operate coherently with Nicolae)
+- Try to increase the resolution of input image and train the model again (but slower)
+- test it. 
+
 
 
 ABOUT FILES
