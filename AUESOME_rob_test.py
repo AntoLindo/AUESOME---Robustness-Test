@@ -1,3 +1,8 @@
+'''
+TO ACTIVATE CUDA NVIRMENT: conda activate pytorch_cuda12
+'''
+
+
 import torch
 import torch.nn as nn
 from torchvision import models, datasets
@@ -164,9 +169,15 @@ for epoch in range(EPOCHS):
     train_accs.append(train_acc)
     val_accs.append(val_acc)
 
+    # Plot Loss and accuracy variatios
+
+    
+    plot_training_curves(train_losses, val_losses, train_accs, val_accs)
+
     print(f"Epoch {epoch+1}/{EPOCHS} "
           f"| Train Loss: {train_loss:.4f}, Acc: {train_acc:.4f} "
           f"| Val Loss: {val_loss:.4f}, Acc: {val_acc:.4f}")
+
 
 # ----------------------------
 # 6. Save model
@@ -175,9 +186,3 @@ torch.save(model.state_dict(), "D:/MACHINE LEARNING/savings/AUESOME_rob_test_PAR
 print("✅ Model saved as AUESOME_rob_test_PARAMETERS_30sept.pth")
 
 
-# ----------------------------
-# 7. Plot Loss and accuracy variatios
-# ----------------------------
-
-
-plot_training_curves(train_losses, val_losses, train_accs, val_accs)
