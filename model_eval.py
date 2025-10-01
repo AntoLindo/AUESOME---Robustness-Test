@@ -24,7 +24,7 @@ def make_rgb_image(channels):
     return np.stack([normalize_channel(ch) for ch in channels], axis=-1)
 
 class DFTDCTTransform:
-    def __init__(self, img_size=224):
+    def __init__(self, img_size=512):
         self.img_size = img_size
 
     def __call__(self, img: Image.Image):
@@ -63,7 +63,7 @@ class DFTDCTTransform:
 # ----------------------------
 # 2. Dataset & Loader
 # ----------------------------
-IMG_SIZE = 224
+IMG_SIZE = 512
 transform = DFTDCTTransform(img_size=IMG_SIZE)
 
 test_dataset = datasets.ImageFolder("D:/MACHINE LEARNING/AIvsREAL_subset/test", transform=transform)
@@ -91,16 +91,16 @@ num_classes = 2
 model.fc = nn.Linear(model.fc.in_features, num_classes)
 
 # Load saved weights
-model.load_state_dict(torch.load("D:/MACHINE LEARNING/savings/resnet18_dftdct.pth", map_location=device))
+model.load_state_dict(torch.load("D:/MACHINE LEARNING/savings/AUESOME_rob_test_PARAMETERS_30sept.pth", map_location=device))
 model = model.to(device)
-#model.eval()  # important!
+model.eval()  # important!
 
 # ----------------------------
 # 4. Evaluation
 # ----------------------------
 y_true, y_pred = [], []
 correct, total = 0, 0
-'''
+
 with torch.no_grad():
     for images, labels in tqdm(test_loader):
         images, labels = images.to(device), labels.to(device)
@@ -121,6 +121,6 @@ cm = confusion_matrix(y_true, y_pred)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=test_dataset.classes)
 disp.plot(cmap="Blues")
 plt.show()
-'''
+
 # Mostra 8 immagini con predizioni
 show_predictions(test_dataset, test_loader, model, device, num_images=30, row_size=10)
