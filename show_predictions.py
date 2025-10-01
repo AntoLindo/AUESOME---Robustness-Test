@@ -37,7 +37,7 @@ def show_predictions(test_dataset, test_loader, model, device, num_images=30, ro
         img_path, label = test_dataset.samples[idx]
         file_name = os.path.basename(img_path)  # <-- nome file
         img_orig = Image.open(img_path).convert("RGB")
-        img_orig = img_orig.resize((224, 224))  # opzionale
+        img_orig = img_orig.resize((512, 512))  # opzionale
 
         # prepara immagine per la rete (usa la trasformazione del dataset)
         img_tensor = test_dataset[idx][0].unsqueeze(0).to(device)  # (1, 9, H, W)
@@ -56,3 +56,4 @@ def show_predictions(test_dataset, test_loader, model, device, num_images=30, ro
 
     plt.tight_layout()
     plt.show()
+
