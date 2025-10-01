@@ -17,7 +17,7 @@ GENERAL TIMELINE
 Shall we think about three dymensional DFT? And try to compute the three channels differently?
 
 
-SEPTEMBER 30th : STATE OF THE ART UPDATE
+SEPTEMBER 30th : 
 
 The network has been built and the training process has started using the Python code called CODE_3.py. Fist results show good prediction capabilities. Next steps will be the following:
 - Train the network more to increase the accuracy, plotiting loss function epoch after epoch.
@@ -25,6 +25,12 @@ The network has been built and the training process has started using the Python
 - MOVE ALL THE SOFTWARE STRUCTURE ON GOOGLE COLAB (In order to operate coherently with Nicolae)
 - Try to increase the resolution of input image and train the model again (but slower)
 - test it. 
+
+OCTOBER 1st : 
+
+After training the network for 10 epochs (around 3 hours training on local GPU) it shows good results in classification: 87% accuracy.
+The model has been trained on 512x512 px images, a little upscale with respect to the precedent versions (224x224px).
+One can find the first results in RESULTS/GRAPHS/1_10_25
 
 
 
