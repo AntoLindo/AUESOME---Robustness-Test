@@ -44,7 +44,9 @@ Apart from data augmentation, we could consider extending the classifier to vide
 
 ABOUT FILES
 
-AUSOME_rob_test.py : Ccurrent version of trainable CNN (update of CODE_3.py)
+AUSOME_rob_test (FOLDER) : All the working files to train and test the network. 
+
+AUSOME_rob_test.py : Current version of trainable CNN (update of CODE_3.py)
 
 CODE_1.py : is the first attempt at building a CNN based on ResNet-18.
 
