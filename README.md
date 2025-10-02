@@ -32,6 +32,14 @@ After training the network for 10 epochs (around 3 hours training on local GPU) 
 The model has been trained on 512x512 px images, a little upscale with respect to the precedent versions (224x224px).
 One can find the first results in RESULTS/GRAPHS/1_10_25
 
+OCTOBER 2nd : 
+
+Reorganizing files in a class architecture to clean the code and make it easier to adjust, train and expand for training, test, and the application process. 
+All the working files are inside the AUESOME_rob_test folder. 
+A new training set of 4800 images of 1024x1024px has been created and will be sampled during the next training session.
+After strengthening the robustness of the network with new training sessions on a larger and higher-resolution dataset, we'll develop an application tool in a Python environment to test the network on ordinary images from outside our training set. Evaluating its efficiency, we'll decide what to do next. 
+Apart from data augmentation, we could consider extending the classifier to videos with frame sampling and analysis of some frames from video sequences. 
+
 
 
 ABOUT FILES
