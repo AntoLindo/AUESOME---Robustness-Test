@@ -40,13 +40,20 @@ A new training set of 4800 images of 1024x1024px has been created and will be sa
 After strengthening the robustness of the network with new training sessions on a larger and higher-resolution dataset, we'll develop an application tool in a Python environment to test the network on ordinary images from outside our training set. Evaluating its efficiency, we'll decide what to do next. 
 Apart from data augmentation, we could consider extending the classifier to videos with frame sampling and analysis of some frames from video sequences. 
 
+OCROBER 8th :
 
+Unfortunately the model seems to be overfitting on the training set. It shows excellent performances on the training set, good performances on the validation, but very bad performances on test set and random images. 
+Necessary steps: 
+- re train the network with bigger images ex.1024x1024px
+- work on data augmentation (ex. lossy compression)
 
 ABOUT FILES
 
 AUSOME_rob_test (FOLDER) : All the working files to train and test the network. 
 
 AUSOME_rob_test.py : Current version of trainable CNN (update of CODE_3.py)
+
+auesome_singlepic_eval.py : select a picture from your local disk and use the trained network to verify if the image is real or fake
 
 CODE_1.py : is the first attempt at building a CNN based on ResNet-18.
 
