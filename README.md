@@ -47,6 +47,13 @@ Necessary steps:
 - re train the network with bigger images ex.1024x1024px
 - work on data augmentation (ex. lossy compression)
 
+OCTOBER 23RD:
+
+To better model performance and reduce overfitting, we started 
+- increasing semantic variability in the training set by adding personal digital photographs;
+- apply lossy compression randomly on the train set to better network recongition on images with compression artefacts;
+- reduce network complexity by deactivating some nodes. 
+
 ABOUT FILES
 
 AUSOME_rob_test (FOLDER) : All the working files to train and test the network. 
