@@ -51,8 +51,8 @@ OCTOBER 23RD:
 
 To better model performance and reduce overfitting, we started 
 - increasing semantic variability in the training set by adding personal digital photographs;
-- apply lossy compression randomly on the train set to better network recongition on images with compression artefacts;
-- reduce network complexity by deactivating some nodes. 
+- apply lossy compression randomly on the train set to better network recongition on images with compression artefacts; ✅
+- reduce network complexity by deactivating some nodes. ✅
 
 ABOUT FILES
 
