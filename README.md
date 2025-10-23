@@ -45,7 +45,7 @@ OCROBER 8th :
 Unfortunately the model seems to be overfitting on the training set. It shows excellent performances on the training set, good performances on the validation, but very bad performances on test set and random images. 
 Necessary steps: 
 - re train the network with bigger images ex.1024x1024px
-- work on data augmentation (ex. lossy compression)
+- work on data augmentation (ex. lossy compression)✅
 
 OCTOBER 23RD:
 
