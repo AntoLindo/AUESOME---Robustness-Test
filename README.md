@@ -57,7 +57,7 @@ To better model performance and reduce overfitting, we started
 OCTOBER 24th:
 
 Launching training of 10 epochs with the following proprieties:
-- 1024x1024px images;
+- 720x720px images;
 - updated dataset with personal digital photographs;
 - random jpeg compression 40% of the images;
 - batch size: 25;
