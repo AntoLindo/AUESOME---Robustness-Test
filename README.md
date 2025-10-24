@@ -54,6 +54,15 @@ To better model performance and reduce overfitting, we started
 - apply lossy compression randomly on the train set to better network recongition on images with compression artefacts; ✅
 - reduce network complexity by deactivating some nodes. ✅
 
+OCTOBER 24th:
+
+Launching training of 10 epochs with the following proprieties:
+- 1024x1024px images;
+- updated dataset with personal digital photographs;
+- random jpeg compression 40% of the images;
+- batch size: 25;
+- loaded parameters: 8oct.
+
 ABOUT FILES
 
 AUSOME_rob_test (FOLDER) : All the working files to train and test the network. 
