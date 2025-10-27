@@ -20,11 +20,11 @@ from auesome_network_loader import network_loader
 
 
 
-IMG_SIZE = 200
-EPOCHS = 1
-batch_size = 8
-param_load_dir = "D:/MACHINE LEARNING/savings/AUESOME_rob_test_PARAMETERS_30sept.pth"
-param_save_dir = "D:/MACHINE LEARNING/savings/AUESOME_rob_test_PARAMETERS_1oct.pth"
+IMG_SIZE = 720
+EPOCHS = 10
+batch_size = 25
+param_load_dir = "D:/MACHINE_LEARNING/savings/AUESOME_rob_test_PARAMETERS_8oct.pth"
+param_save_dir = "D:/MACHINE_LEARNING/savings/AUESOME_rob_test_PARAMETERS_24oct_(1024px).pth"
 
 
 
