@@ -4,6 +4,7 @@ CNN for Syntethic Images Classifier Through Spectral Analysis
 
 ORIGINAL DATASET @ https://www.kaggle.com/datasets/tristanzhang32/ai-generated-images-vs-real-images?resource=download-directory
 
+SAVED TRAINED PARAMETERSA : https://drive.google.com/drive/folders/1L5QkxSLBPpn8fG7xAMsj4_Hl6JIQSTOD?usp=sharing
 
 GENERAL TIMELINE
 
@@ -63,7 +64,7 @@ Launching training of 10 epochs with the following proprieties:
 - batch size: 25;
 - loaded parameters: 8oct.
 
-OCTOBER 27ts:
+OCTOBER 27th:
 
 After training the network for 10 epochs (it took almost 24 hours to complete the training), the network still shows low accuracy and low performance in recognizing real images. Accuracy on the test set is said to be 75.71%.
 At the same time, launching "auesome_singlepic_eval.py" and testing the network on personal photographs, it shows good classification capabilities in images with "few details", while almost no capabilities with real images with many details, often classified as "fake". Examples of this can be seen in the RESULTS folder. 
