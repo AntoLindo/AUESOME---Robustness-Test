@@ -63,6 +63,12 @@ Launching training of 10 epochs with the following proprieties:
 - batch size: 25;
 - loaded parameters: 8oct.
 
+OCTOBER 27ts:
+
+After training the network for 10 epochs (it took almost 24 hours to complete the training), the network still shows low accuracy and low performance in recognizing real images. Accuracy on the test set is said to be 75.71%.
+At the same time, launching "auesome_singlepic_eval.py" and testing the network on personal photographs, it shows good classification capabilities in images with "few details", while almost no capabilities with real images with many details, often classified as "fake". Examples of this can be seen in the RESULTS folder. 
+If the model is unable to recognize real images with many details, it means that it classifies high-frequency domains as fake. There is work to do on higher frequencies. 
+
 ABOUT FILES
 
 AUSOME_rob_test (FOLDER) : All the working files to train and test the network. 
